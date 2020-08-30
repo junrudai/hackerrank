@@ -1,0 +1,9 @@
+-- https://www.hackerrank.com/challenges/weather-observation-station-18/problem
+SELECT
+    ROUND(
+        MAX(s1.LAT_N) - MIN(s2.LAT_N) + MAX(s2.LONG_W) - MIN(s2.LONG_W),
+        4
+    )
+FROM
+    STATION s1
+    JOIN STATION s2

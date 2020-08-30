@@ -1,0 +1,9 @@
+--  https://www.hackerrank.com/challenges/occupations/problem
+
+SELECT 
+    MAX(CASE WHEN occupation = 'Doctor' THEN Name ELSE NULL END) Doctor,
+    MAX(CASE WHEN occupation = 'Professor'THEN Name  ELSE NULL END) Professor,
+    MAX(CASE WHEN occupation = 'Singer' THEN Name ELSE NULL END) Singer,
+    MAX(CASE WHEN occupation = 'Actor' THEN Name ELSE NULL END) Actor
+FROM OCCUPATIONS
+ORDER BY Name
